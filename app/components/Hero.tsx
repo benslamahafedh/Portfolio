@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
-
+import hafedh_ben_slama from '../images/hafedh_ben_slama.jpg'
 export default function Hero() {
   return (
     <section className="relative pt-16 md:pt-24 lg:pt-32 pb-16 overflow-hidden">
@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="relative hidden lg:block animate-fade-in">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full opacity-20 blur-3xl dark:opacity-40"></div>
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src={hafedh_ben_slama}
               alt="Hafedh Ben Slama"
               width={400}
               height={400}
