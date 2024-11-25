@@ -1,10 +1,17 @@
-import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
-import hafedh_ben_slama from '../images/hafedh_ben_slama.jpg'
+'use client';
+
+import Image from 'next/image';
+import ParticlesBg from 'particles-bg';
+import { ArrowRight } from 'lucide-react';
+import hafedh_ben_slama from '../images/hafedh_ben_slama.jpg';
+
 export default function Hero() {
   return (
     <section className="relative pt-16 md:pt-24 lg:pt-32 pb-16 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Particle background */}
+      <ParticlesBg type="circle" bg={true} />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
@@ -35,6 +42,5 @@ export default function Hero() {
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent dark:from-gray-900 dark:to-transparent"></div>
     </section>
-  )
+  );
 }
-

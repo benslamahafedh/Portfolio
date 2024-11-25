@@ -1,4 +1,5 @@
-import { FileDown } from 'lucide-react'
+import { FileDown } from "lucide-react";
+import Link from "next/link";
 
 export default function CVDownload() {
   return (
@@ -11,7 +12,7 @@ export default function CVDownload() {
           </p>
           <a
             href="/Hafedh_Ben_Slama_CV.pdf"
-            download
+            download="Hafedh_Ben_Slama_CV.pdf"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors animate-slide-up"
           >
             <FileDown className="mr-2 h-5 w-5" />
@@ -20,6 +21,5 @@ export default function CVDownload() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
