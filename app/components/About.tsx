@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import FloatingShapes from './FloatingShape'
+import { useRef, useState } from 'react'
 
 interface CardProps {
   title: string
@@ -19,9 +18,9 @@ function Card({ title, content }: CardProps) {
     const y = e.clientY - rect.top
     const centerX = rect.width / 2
     const centerY = rect.height / 2
-    const rotateX = (y - centerY) / 10
-    const rotateY = (centerX - x) / 10
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`)
+    const rotateX = (y - centerY) / 20
+    const rotateY = (centerX - x) / 20
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`)
   }
 
   const handleMouseLeave = () => {
@@ -36,7 +35,7 @@ function Card({ title, content }: CardProps) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
       <p className="text-gray-600 dark:text-gray-300">{content}</p>
     </div>
   )
@@ -46,7 +45,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-20 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
             title="Full Stack Developer"
