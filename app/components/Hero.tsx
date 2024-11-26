@@ -4,12 +4,12 @@ import Image from 'next/image';
 import ParticlesBg from 'particles-bg';
 import { ArrowRight } from 'lucide-react';
 import hafedh_ben_slama from '../images/hafedh_ben_slama.jpg';
+import ParticleEffect from './ParticleEffect';
 
 export default function Hero() {
   return (
     <section className="relative pt-16 md:pt-24 lg:pt-32 pb-16 overflow-hidden">
-      {/* Particle background */}
-      <ParticlesBg type="circle" bg={true} />
+      <ParticleEffect/>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
