@@ -31,6 +31,9 @@ const Blogs = dynamic(() => import('./Blogs'), {
 const Testimonials = dynamic(() => import('./Testimonials'), {
   loading: () => <div className="py-20" />
 })
+const CVDownload = dynamic(()=>import ("./CVDownload"),{
+    loading:()=><div className="py-20" />
+})
 
 const Contact = dynamic(() => import('./Contact'), {
   loading: () => <div className="py-20" />
@@ -56,6 +59,7 @@ export default function HomeContent() {
       <Portfolio />
       <Blogs />
       <Testimonials />
+      <CVDownload/>
       <Contact />
       <Footer />
     </>
